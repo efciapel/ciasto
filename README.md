@@ -1,0 +1,2 @@
+# ciasto
+Przeliczanie blaszek.
