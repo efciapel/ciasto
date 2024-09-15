@@ -4,7 +4,7 @@ def get_baking_mold_shape(prompt):
     is_shape_valid = False
     while not is_shape_valid:
         shape = input(prompt + ' (o - okrągła, p - prostokątna): ')
-        is_shape_valid = True if shape in ['o', 'p'] else False
+        is_shape_valid = shape in ['o', 'p']
     return shape
 
 
@@ -30,6 +30,6 @@ wsp = to / ori
 
 is_still_running = True
 while is_still_running:
-    how_much = float(input('Ile? (podaj cyfrę mniejszą od zera, aby zakończyć): '))
-    is_still_running = False if how_much < 0 else True
+    how_much = float(input('Ile? (podaj liczbę mniejszą lub równą zeru, aby zakończyć): '))
+    is_still_running = how_much >= 0
     print(how_much * wsp if is_still_running else 'Do widzenia!')
